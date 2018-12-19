@@ -3,20 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
 
 namespace RandoChoose
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            if (args.Length == 1 && args[0] == "1")
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Main());
+            }
+            else
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = @"RMGUpdater";
+                p.StartInfo.Arguments = "RandoChoose";
+                p.StartInfo.WorkingDirectory = Path.Combine(Directory.GetCurrentDirectory(), "update");
+                p.Start();
+                Environment.Exit(0);
+            }
         }
     }
 }
