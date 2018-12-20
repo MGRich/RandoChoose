@@ -16,7 +16,7 @@ namespace RandoChoose
         [STAThread]
         private static void Main(string[] args)
         {
-            if (args.Length == 1 && args[0] == "1")
+            if (args.Length == 1 && int.TryParse(args[0], out int e))
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
