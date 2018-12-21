@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6637A20C-8D38-481E-B65D-FE7E9C446E41}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>RandoChoose</RootNamespace>
     <AssemblyName>RandoChoose</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
