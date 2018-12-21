@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.changelogButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -40,7 +41,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(95, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 158);
+            this.label1.Size = new System.Drawing.Size(249, 132);
             this.label1.TabIndex = 2;
             this.label1.Text = "Made by RMGRich.\r\n\r\nSpecial thanks:\r\n- My teacher for bringing the idea up to me." +
     "";
@@ -66,11 +67,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // changelogButton
+            // 
+            this.changelogButton.Location = new System.Drawing.Point(264, 148);
+            this.changelogButton.Name = "changelogButton";
+            this.changelogButton.Size = new System.Drawing.Size(75, 23);
+            this.changelogButton.TabIndex = 3;
+            this.changelogButton.Text = "Changelog";
+            this.changelogButton.UseVisualStyleBackColor = true;
+            this.changelogButton.Click += new System.EventHandler(this.showChangelog);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 183);
+            this.Controls.Add(this.changelogButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -88,5 +100,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button changelogButton;
     }
 }
